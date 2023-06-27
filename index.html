@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+	<title>Encriptador</title>
+</head>
+	<!--Inicio de BODY-->
+	
+<body>
+	<!--Inicio de Header-->
+	<header>
+		<h1><img src="branding/l-no-back.png" id="logoLapsus"><a href="index.html"></a></li>
+		</h1>
+		<div id="navBar">
+		
+		<nav>
+					<ul class="navUl">
+                        <!--tag <a> sirve apra referenceiar-->
+                        	<li><a href="productos.html">Home</a></li>
+                        
+                    </ul>
+		</nav>
+	</div>
+	</header>
+
+	<!--Inicio de Main-->
+	<main>
+		<!--Inicio de field set/input texto y boton encriptar/desencriptar-->
+		<div id="principal">
+			<fieldset class="cajaTexto">
+					<form>
+						<textarea cols="70" rows="10" id="inputCifrar" required></textarea>
+					</form>
+					<label for="radio-email" id="requerido">
+                      &#9888; Solo letras minúsculas sin acentos
+                    </label>
+                    <input type="submit" value="Encriptar" id="encripta" class="enviar">
+                    <input type="submit" value="Descencriptar" id="desencriptar" class="enviar">
+			</fieldset>
+			<!--Inicio de field salida texto y boton copiar-->
+			<fieldset class="cajaTexto">
+					<form>
+						<textarea cols="70" rows="10" id="outputTextoFinal" required readonly></textarea>
+					</form>
+					<input type="submit" value="Copiar" id="copiar" class="enviar">
+			</fieldset>	
+		</div>
+		
+		
+	</main>
+
+	<!--Inicio de Footer-->
+	´<footer>
+		    <img src="branding/l-no-back.png" alt="logoLapsus" id="footLogoLapsus">
+            <p id="copyright">&copy Copyright Lapsus Digital, Developed by Rust - 2023</p>
+	</footer>
+	<script type="text/javascript" src="funcionalidad.js"></script>
+</body>
+</html>

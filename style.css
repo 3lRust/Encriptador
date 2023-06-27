@@ -1,0 +1,189 @@
+/* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;/*indico el tipo de texto que vboy a usar*/
+  color: #fff; /*indico el color del texto*/
+  background: linear-gradient(45deg, #7c8283, #738c8c, #699596);/*indico los colores que tendra el gradiente*/
+  background-size: 400% 400%;/*le indico el tamaño de mi bacjground*/
+  position: relative;/*para hacerlo responsivo desde el principio indico que el elemento permitira ajustr sus propieda
+  des de posicion*/
+  animation: cambiar 10s ease infinite;/*indico los tiempos de mi animacion gradiente*/
+}
+
+/* Header */
+header {
+  background-color: #738c8c;/*le asigno el color a mi header*/
+  display: flex;/*le digo que sus elementos dentro de seranflexibles para poder alinearlos a mi gusto*/
+}
+
+#navBar {
+  display: flex;/*le digo que sus elementos dentro de seranflexibles para poder alinearlos a mi gusto*/
+  width: 100%;/*le asigno el tamaño del 100%*/
+  height: 50px;/*una altura de 50px*/
+  position: sticky;/*le indico que aun que hagamos scroll este permanesca visible*/
+  top: 0;/*le asigno margenes*/
+  margin: 0;
+  justify-content: flex-end; /* Alinear los elementos a la derecha */
+  align-items: center; /* Mantener centrado verticalmente */
+}
+
+nav {
+  padding-top: 35px;/*le asigno espacios para arriba*/
+}
+
+nav ul {
+  list-style: none;/*elimina los parametros de estilo predeterminados a marcadores o numeraciones*/
+  padding: 0;/*asigno los espacios que tendra*/
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;/*le indicamos que cada elemento de esta lista aparecera en linea , continua*/
+  margin: 10px;/*le damos un amrgen de 10px*/
+}
+
+a {
+  text-transform: uppercase;/*convertimos el texto a mayusculas*/
+  color: floralwhite;/*asignamos color*/
+  font-weight: bold;/*le decimos que coloque en negritas*/
+  font-size: 22px;/*indicamos el tamaño*/
+  text-decoration: none;/*quitamos cualquier decoracion por defecto*/
+}
+
+nav a:hover {/*con la propiedad hover indicamos que al posar el mouse sobre el realize estos cambios*/
+  color: #C78C19;/*indicamos el color*/
+  text-decoration: underline;/*indicamos que este sera subrayado cuando se coloque el mouse sobre el*/
+}
+
+#logoLapsus {
+  justify-content: flex-start;/*se utiliza para alinear elementos 
+  hacia el comienzo del contenedor en ladireccion que se establezca*/
+  width: 10%;/*tamaño de*/
+  flex: 1;/**/
+}
+
+/* Main */
+#principal {
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección a column */
+  width: 940px;
+  margin: 0;
+  padding: 50px;
+}
+
+.cajaTexto {
+  flex: 1;
+  text-align: center;
+  margin: 0 .2%;
+  padding: 30px 20px;
+  box-sizing: border-box;/*asignamos el tamaño del borde ded la caja*/
+  border: none;/*le quitamos los bordes*/
+  background-color: #699596;
+  border-radius: 10px;/*redondeamos las ezquinas con la propiedad en px*/
+}
+
+#inputCifrar {
+  color: #00FF00;
+  background-color: inherit;
+  border: none;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+#outputTextoFinal {
+  color: #00FF00;
+  background-color: inherit;
+  border: none;
+  resize: none;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+/* Enviar */
+#requerido {
+  display: block;
+  justify-content: flex-end;/*alineamos los elementos al final*/
+}
+
+.enviar {
+  height: 40px;
+  width: 160px;
+  font-size: 18px;
+  line-height: 35px;
+  color: #FFFFFF;
+  background-color: #699596;
+  border-radius: 15px;
+  transition: 1s all;/*asignamos una animacion*/
+  text-align: center;
+  cursor: pointer;/*cambiamos el cursos al colocarnos cerca de este elemento*/
+  margin: 4px 2px;
+}
+
+.enviar:hover {/*cuando estemos sobre el boton*/
+  background-color: darksalmon;
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #738c8c;
+  padding: 10px;
+  justify-content: center;
+}
+
+#footLogoLapsus {
+  width: 5%;
+}
+
+#copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  margin: 20px;
+}
+
+/* Fondo animado */
+@keyframes cambiar {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Responsividad */
+@media screen and (max-width: 810px) {
+  h1 {
+    text-align: center;
+  }
+  
+  nav {
+    position: static;
+  }
+
+  #navBar, #principal {
+    width: auto;
+  }
+
+  .cajaTexto {
+    flex: none; /* Evita que las cajas de texto se estiren */
+    width: 100%; /* Ajusta el ancho al 100% */
+    margin: 10px 0; /* Agrega un margen superior e inferior para separar las cajas */
+  }
+
+  #outputTextoFinal, #inputCifrar {
+    position: static;
+    width: 100%;
+  }
+}
+
+/* Pantallas más grandes */
+@media screen and (min-width: 811px) {
+  #principal {
+    flex-direction: row; /* Vuelve a establecer la dirección a row */
+  }
+
+  .cajaTexto {
+    flex: 1; /* Ocupa el espacio disponible en la fila */
+    margin: 0 10px; /* Ajusta el margen entre las cajas */
+  }
+}

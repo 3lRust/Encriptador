@@ -1,0 +1,168 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+   color: #fff;
+  background: linear-gradient(45deg,#7c8283,#738c8c,#699596);
+  background-size: 400% 400%;
+  position: relative; 
+  animation: cambiar 10s ease infinite;
+
+}
+/*inicia el header*/
+header {
+  background-color: #738c8c;
+  display: flex;
+}
+/*propiedad display flex para que ocupen los espacios alrededor.*/
+#navBar {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  justify-content: flex-end; /* Alinear los elementos a la derecha */
+  align-items: center; /* Mantener centrado verticalmente */
+}
+
+nav {
+  padding-top: 35px;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+
+}
+a{
+  text-transform: uppercase;
+  color: floralwhite;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #color: floralwhite;;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #C78C19;
+      /*agregar unba decoracion (subrayado)*/
+  text-decoration: underline;
+}
+
+#logoLapsus {
+  justify-content: flex-start;
+  width: 10%;
+  flex: 1;
+}
+
+#brand {
+  width: 5%;
+}
+/*inicia el main*/
+#principal {
+  display: flex;
+  width: 940px;
+  margin: 0 ;
+  padding: 50px;
+}
+
+.cajaTexto {
+  flex: 1;
+  text-align: center;
+  
+  margin: 0 .2%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: none; /* Elimina las propiedades relacionadas con los bordes */
+  background-color: #699596; /* Ajusta el color de fondo deseado */
+  border-radius: 10px;
+}
+
+#inputCifrar {
+    color: #00FF00;
+    background-color: inherit;
+    border: none;
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+#outputTextoFinal {
+  color: #00FF00;
+  background-color: inherit;
+  border: none;
+  resize: none; /* Evitar redimensionamiento manual */
+  width: auto; /* Ajustar al tamaño del texto */
+  margin-bottom: 20px;
+}
+
+
+
+/*Inicia integracion enviar*/
+#requerido{
+  display: block;
+  justify-content: flex-end;
+}
+
+.enviar {
+  height: 40px;
+  width: 160px;
+  /*padding: 25px  ; nuevo, opción A */ 
+  font-size: 18px;
+  line-height: 35px;
+  
+  color: #FFFFFF;
+  background-color: #699596  ;
+  border-radius: 15px;
+  /*le decimos que oscuresca lento, y con all le decimos que a todos los articulos dentro de esa clase*/
+  transition: 1s all;
+  text-align: center;
+  cursor: pointer;
+  margin: 4px 2px;
+  
+}
+
+.enviar:hover {/*al pasar el cursor sobre el boton*/
+  background-color: darksalmon;
+  transform: scale(1.2);
+}
+
+/*inicia el footer*/
+footer {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #738c8c;
+  padding: 10px;
+  justify-content: center;
+}
+
+#footLogoLapsus {
+  width: 5%;
+}
+
+#copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  margin: 20px;
+}
+
+/*Fondo animado*/
+
+@keyframes cambiar{
+  0%{background-position: 0 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0 50%;}
+}
